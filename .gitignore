@@ -10,7 +10,6 @@ env/
 data/raw/
 data/processed/
 models/
-reports/figures/
 
 .env
 .DS_Store

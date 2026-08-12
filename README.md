@@ -31,6 +31,8 @@ Target distribution:
 - Good risk: 700 samples, 70%
 - Bad risk: 300 samples, 30%
 
+![Target Distribution](reports/figures/target_distribution.png)
+
 ## Business Context
 
 The dataset provides a cost matrix.
@@ -138,6 +140,10 @@ Default threshold 0.50:
 - Business cost: 98
 
 Under the provided cost matrix, threshold 0.45 achieves the lowest business cost on the test set.
+
+![Threshold Metrics](reports/figures/threshold_metrics.png)
+
+![Business Cost by Threshold](reports/figures/threshold_business_cost.png)
 
 ## Model Interpretation
 
