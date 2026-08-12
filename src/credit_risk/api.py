@@ -5,12 +5,19 @@ from fastapi import FastAPI
 
 from credit_risk.schemas import CreditRiskInput, CreditRiskPrediction
 
-MODEL_PATH = "models/logistic_regression_pipeline.joblib"
+from pathlib import Path
+
+MODEL_PATH = Path("models/logistic_regression_pipeline.joblib")
 THRESHOLD = 0.45
 
 app = FastAPI(title="Credit Risk Scoring API")
-model = joblib.load(MODEL_PATH)
 
+if not MODEL_PATH.exists():
+    raise FileNotFoundError(
+        f"Model file not found at {MODEL_PATH}. Run save_model.py first."
+    )
+
+model = joblib.load(MODEL_PATH)
 
 
 @app.get("/health")
