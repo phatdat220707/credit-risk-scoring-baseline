@@ -262,6 +262,8 @@ $env:PYTHONPATH="src"
 
 ## API Usage
 
+Demo page: http://127.0.0.1:8000/demo
+
 Run the FastAPI server:
 
 ```powershell

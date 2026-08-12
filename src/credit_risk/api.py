@@ -7,6 +7,8 @@ from credit_risk.schemas import CreditRiskInput, CreditRiskPrediction
 
 from pathlib import Path
 
+from fastapi.responses import HTMLResponse
+
 MODEL_PATH = Path("models/logistic_regression_pipeline.joblib")
 THRESHOLD = 0.45
 
@@ -32,6 +34,18 @@ def root():
         "endpoints": ["/health", "/predict"],
     }
 
+@app.get("/demo", response_class=HTMLResponse)
+def demo_page():
+    return """
+    <html>
+        <head><title>Credit Risk Demo</title></head>
+        <body style="font-family: Arial; max-width: 800px; margin: 40px auto;">
+            <h1>Credit Risk Scoring Demo</h1>
+            <p>Open <a href="/docs">/docs</a> to test the prediction API.</p>
+            <p>Use POST /predict with applicant data to get bad risk probability.</p>
+        </body>
+    </html>
+    """
 
 @app.post("/predict", response_model=CreditRiskPrediction)
 def predict_credit_risk(payload: CreditRiskInput):
