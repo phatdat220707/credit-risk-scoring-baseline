@@ -114,6 +114,21 @@ Random Forest:
 
 Logistic Regression performs better than Random Forest on this baseline split across most metrics.
 
+## Cross-Validation
+
+A 5-fold stratified cross-validation is also run for Logistic Regression.
+
+Mean scores:
+
+- Accuracy: 0.719
+- Precision: 0.524
+- Recall: 0.720
+- F1: 0.606
+- ROC-AUC: 0.786
+- PR-AUC: 0.610
+
+This provides a more stable estimate than relying only on a single train/test split.
+
 ## Threshold Tuning
 
 The default threshold is 0.50.
