@@ -102,6 +102,8 @@ Logistic Regression:
 - PR-AUC: 0.633
 - Confusion matrix: TN=102, FP=38, FN=12, TP=48
 
+![Confusion Matrix](reports/figures/confusion_matrix.png)
+
 Random Forest:
 
 - Accuracy: 0.705
