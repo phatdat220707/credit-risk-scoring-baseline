@@ -252,6 +252,12 @@ $env:PYTHONPATH="src"
 .\.venv\Scripts\python.exe -m credit_risk.model_summary
 ```
 
+Save trained model:
+
+```powershell
+$env:PYTHONPATH="src"
+.\.venv\Scripts\python.exe -m credit_risk.save_model
+
 ## Project Structure
 
 ```text
