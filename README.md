@@ -129,6 +129,14 @@ Mean scores:
 
 This provides a more stable estimate than relying only on a single train/test split.
 
+## Key Takeaways
+
+- Logistic Regression is the strongest baseline model in this project.
+- The model reaches 0.806 ROC-AUC and 0.633 PR-AUC on the test set.
+- Using the dataset cost matrix, threshold 0.45 gives the lowest business cost.
+- False negatives are more expensive than false positives, so recall is important.
+- Cross-validation shows the model performance is reasonable but not perfect, which is expected for a real dataset.
+
 ## Threshold Tuning
 
 The default threshold is 0.50.
