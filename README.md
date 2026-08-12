@@ -260,6 +260,70 @@ Save trained model:
 $env:PYTHONPATH="src"
 .\.venv\Scripts\python.exe -m credit_risk.save_model
 
+## API Usage
+
+Run the FastAPI server:
+
+```powershell
+.\run_api.bat
+```
+
+Open API docs:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+Health check:
+
+```text
+GET /health
+```
+
+Prediction endpoint:
+
+```text
+POST /predict
+```
+
+Example request:
+
+```json
+{
+  "checking_account_status": "A11",
+  "duration_months": 24,
+  "credit_history": "A32",
+  "purpose": "A40",
+  "credit_amount": 5000,
+  "savings_account": "A61",
+  "employment_since": "A72",
+  "installment_rate": 4,
+  "personal_status_sex": "A93",
+  "other_debtors": "A101",
+  "residence_since": 2,
+  "property": "A123",
+  "age": 30,
+  "other_installment_plans": "A143",
+  "housing": "A152",
+  "existing_credits": 1,
+  "job": "A173",
+  "dependents": 1,
+  "telephone": "A191",
+  "foreign_worker": "A201"
+}
+```
+
+Example response:
+
+```json
+{
+  "bad_risk_probability": 0.8854,
+  "threshold": 0.45,
+  "prediction": 1,
+  "risk_label": "bad_risk"
+}
+```
+
 ## Project Structure
 
 ```text
