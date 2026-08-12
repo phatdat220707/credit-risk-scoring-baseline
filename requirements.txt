@@ -8,3 +8,5 @@ jupyter
 ipykernel
 tabulate
 joblib
+fastapi
+uvicorn
