@@ -349,9 +349,9 @@ credit-risk-scoring-baseline/
 
 Potential improvements:
 
-- Add cross-validation
-- Compare more models
-- Tune hyperparameters
-- Save the trained model
-- Add visualizations
-- Build a small prediction API with FastAPI
+- Evaluate threshold selection on a separate validation set to avoid optimistic test-set estimates.
+- Tune model hyperparameters and compare additional classification algorithms.
+- Add automated tests for data preprocessing and API predictions.
+- Containerize the FastAPI application using Docker.
+- Improve model explainability with SHAP and investigate fairness across relevant applicant groups.
+- Explore model calibration and assess the stability of predicted probabilities.
